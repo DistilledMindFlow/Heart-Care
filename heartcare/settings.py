@@ -92,7 +92,10 @@ DATABASES = {
 }
 
 
-DATABASES["default"] = dj_database_url.parse("postgresql://bricks_shdt_user:hbXLTYKqhQjv7ArNf30J1j9IsR492lSh@dpg-csj4malsvqrc73enig50-a.oregon-postgres.render.com/bricks_shdt")
+# DATABASES["default"] = dj_database_url.parse("postgresql://bricks_shdt_user:hbXLTYKqhQjv7ArNf30J1j9IsR492lSh@dpg-csj4malsvqrc73enig50-a.oregon-postgres.render.com/bricks_shdt")
+
+DATABASES["default"] = dj_database_url.parse("postgres://default:mtBQTPgy01Cw@ep-polished-leaf-a4yag1q3.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require")
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
