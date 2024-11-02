@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 import datetime
 import os
 import psycopg2
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +28,7 @@ SECRET_KEY = '2y3*%r@d)w5+9@*)i3tdar5q)=^rl^o@zii7)3m4#l^xmr&cqt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["heart.up.railway.app"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -90,6 +91,8 @@ DATABASES = {
     }
 }
 
+
+DATABASES["default"] = dj_database_url.parse("postgresql://bricks_shdt_user:hbXLTYKqhQjv7ArNf30J1j9IsR492lSh@dpg-csj4malsvqrc73enig50-a.oregon-postgres.render.com/bricks_shdt")
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
